@@ -1,0 +1,168 @@
+@font-face {
+    font-family: titulo-mont;
+    src: url(Fontes/Montserrat-Black.otf);
+}
+@font-face {
+    font-family: texto1-mont;
+    src: url(Fontes/Montserrat-Bold.otf);
+}
+@font-face {
+    font-family: texto2-mont;
+    src: url(Fontes/Montserrat-SemiBold.otf);
+}
+@font-face {
+    font-family: texto3-mont;
+    src: url(Fontes/Montserrat-Medium.otf);
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url(Imagens/bg-inf.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header{
+    display: flex;
+    background-color: black;
+    color: white;
+    align-items: center;
+    width: 100%;
+}
+header a{
+    padding-left: 3%;
+}
+.logo-header {
+    padding-left: 3%;
+    height: 100%;
+}
+.link-header li {
+    margin-right: 20px;
+    white-space: nowrap; 
+}
+.link-header{
+    font-weight: 500;
+    list-style-type: none;
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+}
+.link-header a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.link-header a:after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: relative;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+.link-header a:hover:after{
+    color: rgba(255, 255, 255, 0.822);
+    width: 100%;
+    left: 0;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 80%;
+    justify-content: center;
+}
+main h1{
+    color: white;
+    text-align: initial;
+    font-family: texto2-mont;
+    font-size: 2em;
+    border-bottom: 2px solid white;
+    display: inline-block;
+}
+main h2{
+    color: white;
+    font-family: texto2-mont;
+}
+main p{
+    color: white;
+    text-align: justify;
+    font-family: texto3-mont;
+    font-size: 1em;
+}
+main a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-family: texto3-mont;    
+}
+main li{
+    color: white;
+    font-family: texto2-mont;
+    text-align: initial;
+}
+section{
+    display: flex;
+    width: 50em;
+    height: 25em;
+    padding-bottom: 2%;
+}
+section img{
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+section img:hover{
+    cursor:auto;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+.button{
+    height: 2em;
+    margin-right: 10%;
+}
+main a{
+    margin-bottom: 2%;
+}
+
+  
+/* Estilos para a página "About Us" */
+main .team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centraliza verticalmente */
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    max-width: 80%;
+    text-align: center;
+    color: white;
+}
+
+main .team img {
+    max-width: 100%;
+    height: auto; /* Permite que a imagem mantenha sua proporção original */
+    border-radius: 10px; /* Borda arredondada para a imagem */
+    margin-bottom: 20px; /* Espaçamento inferior para a imagem */
+    align-items: center;
+}
+
+main .team p {
+    font-family: texto3-mont;
+    font-size: 1.2em;
+    line-height: 1.4;
+}
+

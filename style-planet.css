@@ -1,0 +1,199 @@
+@font-face {
+    font-family: titulo-mont;
+    src: url(Fontes/Montserrat-Black.otf);
+}
+@font-face {
+    font-family: texto1-mont;
+    src: url(Fontes/Montserrat-Bold.otf);
+}
+@font-face {
+    font-family: texto2-mont;
+    src: url(Fontes/Montserrat-SemiBold.otf);
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url(Imagens/bg-planet.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header{
+    display: flex;
+    background-color: black;
+    color: white;
+    align-items: center;
+}
+header a{
+    padding-left: 3%;
+}
+.logo-header{
+    height: 100%;
+}
+.link-header{
+    font-weight: 500;
+    list-style-type: none;
+    display: flex;
+    align-items: center;    
+}
+.link-header li {
+    margin-right: 20px;
+    white-space: nowrap; 
+}
+
+.link-header a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.link-header a::after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: relative;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+.link-header a:hover::after{
+    color: rgba(255, 255, 255, 0.822);
+    width: 100%;
+    left: 0;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.funcoes-left a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    border: 2px solid white;
+    padding: 1em;
+    margin: 3em;
+    text-transform: uppercase;
+    font-size: 25px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative; 
+}
+.funcoes-left a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    background-color: #ffffff8c;
+    box-shadow: 0px 0px 50px 5px #ffff;
+    height: 10%;
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.funcoes-left a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+}
+
+.funcoes-left a span {
+    display: inline-block;
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.globo-central{
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+.globo-central h2{
+    color: white;
+    font-size: 4em;
+    margin-bottom: 14%;
+    font-family: texto1-mont;
+    text-align: center; 
+    position: relative;  
+}
+.globo-central h2::after{
+    content: "";
+    width: 80%;
+    height: 5%;
+    background: linear-gradient(#ffffff, #ffffff);
+    position: absolute;
+    bottom: -2%;
+    left: 50%;
+    transform: translate(-50%);
+  
+}
+.globe {
+    width: 20em;
+    height: 20em;
+    border-radius: 50%;
+    background-image: url(Imagens/planet.jpg);
+    background-size: cover;
+    box-shadow: -25px -25px 25px black inset, 10px 10px 30px white inset, 0px 0px 20px #3a96ff;
+    animation: rotate 15s linear infinite, verticalMove 6s ease infinite alternate;
+}
+
+@keyframes rotate {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+
+@keyframes verticalMove {
+    0%, 100% {
+        transform: translateY(10px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+  /* Estilize o submenu para que ele seja oculto por padrão */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.671);
+    list-style: none;
+    padding: 0;
+    width: 200px; /* Largura do submenu */
+    border: 2px solid white; /* Borda do submenu */
+    border-radius: 10px; /* Borda arredondada do submenu */
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5); /* Sombra do submenu */
+    z-index: 1; /* Para sobrepor outros elementos */
+}
+
+/* Estilo dos itens do submenu */
+.submenu li {
+    padding: 10px;
+}
+
+/* Estilo dos links no submenu */
+.submenu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px; /* Tamanho da fonte dos links no submenu */
+    display: block;
+    transition: background-color 0.3s; /* Transição de cor de fundo ao passar o mouse */
+}
+
+/* Estilize o link do submenu ao passar o mouse */
+.submenu li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Cor de fundo ao passar o mouse */
+}
+
+/* Ao passar o mouse sobre o item "Explore", mostre o submenu */
+.link-header li:hover .submenu {
+    display: block;
+}
+
+  
